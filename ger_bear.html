@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ger Bear</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .bear-container {
+            margin-top: 20px;
+            text-align: center;
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+    <button id="gerBearButton">Ger Bear</button>
+    <div id="bearContainer" class="bear-container"></div>
+
+    <script>
+        document.getElementById('gerBearButton').addEventListener('click', function() {
+            const bearContainer = document.getElementById('bearContainer');
+            const bearArt = `
+   ʕ•ᴥ•ʔ
+`;
+            const bearElement = document.createElement('div');
+            bearElement.textContent = bearArt;
+            bearContainer.appendChild(bearElement);
+        });
+    </script>
+</body>
+</html>
